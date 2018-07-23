@@ -1,0 +1,256 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head id="Head1"><meta http-equiv="content-type" content="text/html; charset=UTF-8" /><style media="screen"></style>
+<title>
+	用户个人中心
+</title><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" /><meta name="keywords" content="用户个人中心" /><meta name="description" content="用户个人中心" /><link type="text/css" rel="stylesheet" href="/images/wxcs_v3.css" /><link type="text/css" rel="stylesheet" href="/images/default.css" />
+  <script type="text/javascript" src="/images/jquery-1.8.3.min.js"></script>
+  <script type="text/javascript" src="/images/jquery.min.js"></script>
+    <script src="/bundles/js.js"></script>
+    <!--[if lt IE 9]>
+            <script src="/scripts/js/html5.js"></script>
+            <link rel="stylesheet" href="/content/css/ie.css" />
+        <![endif]-->
+    <!--[if lt IE 7]>
+      <script src="/Scripts/json2.js"></script>
+    <![endif]-->
+<script src="/Scripts/jquery.validate.min.js"></script>
+<script src="/Scripts/messages_zh.js"></script>
+<script src="/Scripts/plugin.extend.js"></script>
+<script src="/Scripts/login.js"></script>
+<script src="/Scripts/bootstrap.min.js"></script> 
+    <script type="text/javascript">
+
+        function regfd(clickid) {
+            if (clickid == 'Register') { document.getElementById('Login').style.display = 'none' }
+            if (clickid == 'Login') { document.getElementById('Register').style.display = 'none' }
+            if (document.getElementById(clickid).style.display == 'none') {
+                document.getElementById(clickid).style.display = 'block'
+            }
+            //else {
+            //    document.getElementById(clickid).style.display = 'none'
+            //}
+        }
+        function MyAutoRun() {
+            var url = document.URL;
+            if (url.indexOf("ister") != -1) {
+                regfd('Register');
+                //  document.getElementById('Login').style.display = 'none'
+                //  alert("函数自动执行哦！");
+            }
+        }
+
+</script>
+</head>
+
+<body>
+	
+
+
+<!-- 页面头部 -->
+<div class="jt-header ">
+    <!--头部-->
+    <div class="jt-logo" style="cursor: pointer;">
+        <img src="/images/logo.png" class="fixPng" alt="千万卡验证码接收平台"></div>
+
+    <div class="jt-city clearfix">
+        <a href="#">
+            <div id="jt-cityAdress" class="jt-cityAdress">
+                <span class="jt-cityName">
+                    <br>
+                </span>
+            </div>
+        </a>
+    </div>
+
+</div>
+<div class="jt-nav"><!-- class="jt-nav jt-hide-sm jt-hide-xs" -->
+    <!-- 导航 -->
+    <div class="jt-navBox"><!-- class="jt-navBox clearfix" -->
+
+       <ul class="jt-navBox-ul" style="font-size:14px;">
+           <li style="margin-left:-10px"><a style="margin-right:70px" href="/index.aspx" title="千万卡平台首页"><span class="jt-navBox-ulTitle">首页</span></a> </li>
+            <li style="margin-left:-10px"><a style="margin-right:70px;background:#ed4a9f" href="/Web/DownLoad.Aspx" title="千万卡微信解封,淘宝解除异常,QQ解封解冻客户端下载"><span class="jt-navBox-ulTitle">客户端下载</span></a> </li>
+            <li style="margin-left:-10px"><a style="margin-right:0;background:#ed4a9f" href="/Web/Api.Aspx" title="千万卡手机API接口"><span style="padding:0 70px 0 0" class="jt-navBox-ulTitle">自动化API接口</span></a> </li>
+            <li style="margin-left:-10px"><a style="margin-right:70px;background:#ed4a9f" href="/Web/News.Aspx" title="千万卡机验证码平台,验证码短信平台新闻动态"><span class="jt-navBox-ulTitle">新闻动态</span></a> </li>
+            <li style="margin-left:-10px"><a style="margin-right:0;background:#ed4a9f" href="/Web/JiFen.Aspx" title="千万卡平台积分说明"><span style="padding:0 70px 0 0" class="jt-navBox-ulTitle">积分说明</span></a> </li>
+            <li style="margin-left:-10px"><a style="margin-right:0;background:#ed4a9f" href="/Web/Customer.Aspx" title="千万卡平台客服中心"><span  style="padding:0 70px 0 0" class="jt-navBox-ulTitle">客服中心</span></a> </li>
+       </ul>
+<style>
+
+/*修复应用详情页链接和第三方样式冲突的BUG*/
+.jt-navBoxUser a:hover  {
+	color:#fff;
+	text-decoration:none;
+}
+</style>
+
+        <div class="jt-navBoxUser" style="font-size:14px;background:#ed4a9f">
+            <a href="/userManage/index.aspx" class="jt-navBoxUser-login">vipqjt 个人中心</a>  <a href="/Login.aspx?act=logout" class="jt-navBoxUser-reg">退出</a>
+        </div>
+
+    </div>
+</div>
+<!-- 页面头部结束 -->
+
+
+<div class="jt-container clearfix">
+  <!--内容-->
+  <div class="jt-mod-crumbs jt-hide-sm jt-hide-xs">
+    当前位置：
+    <a href="#">首页</a>
+    <span class="jt-mod-crumbs-gt">&gt;</span>
+    <a href="index.aspx">个人中心</a>
+    <span class="jt-mod-crumbs-gt">&gt;</span>
+    	基本信息
+  </div>
+  <div class="jt-hr jt-hide-sm jt-hide-xs"></div>
+  <div style="width:1210px;" class="jt-ucInfo">
+    <div class="jt-ucInfo-rightImg">
+				<img id="old_logo" src="/images/userface100_100.png" alt="">
+    </div>
+    <div style="width:1120px;margin-left:-30px" class="jt-ucInfo-rightInfo">
+      <div class="jt-ucInfo-rightWelcome"><span class='jt-ucInfo-B'>用 户 名：<span>vipqjt</span></span><span class='jt-ucInfo-B'>余额：<span>0.000</span></span><span class='jt-ucInfo-B'>佣金：<span>0.000</span></span><span class='jt-ucInfo-B'>积分：<span>0.000</span></span><span class='jt-ucInfo-B'>折扣：<span>100%</span></span> </div> <!-- class="jt-ucInfo-rightWelcome" -->
+      <div class="jt-ucInfo-rightWelcome"><span class='jt-ucInfo-B'>用户等级：<span>普通用户</span></span><span class='jt-ucInfo-B'>可同时登录：<span>10</span></span><span class='jt-ucInfo-B'>可同时获取数：<span>30</span></span><span class='jt-ucInfo-B'>单个获取数：<span>10</span></span></div>
+      <div class="jt-ucInfo-rightWelcome"><span class='jt-ucInfo-B'>推广链接：<input  id='referUrl' type='text'  value='最稳定的验证码平台：http://www.yika66.com/Login.aspx?refer_id=100622254#register' class='jt-uc-baseInfo-tg'  placeholder='推广链接'/></span>
+<button id='btnClip' type='button' class='jt-uc-copy-btn'>复制</button>
+                    <script type='text/javascript'>
+                        $(function () { $('#btnClip').click(function () { try {window.clipboardData.setData('text', $('#referUrl').val());bootbox.alert('复制成功');} catch (e) { alert('你的浏览器不支持复制，请手动按Ctrl+C'); } });
+                        })
+                    </script>
+<span class='jt-ucInfo-B'>开发者参数：<input  id='referUrl1' type='text'  value='Developer=iQk7f%2fZP3vZVQjg6g8%2bziw%3d%3d' class='jt-uc-baseInfo-tg'  placeholder='开发者参数'/></span>
+<button id='btnClip1' type='button' class='jt-uc-copy-btn'>复制参数</button>
+   <script type='text/javascript'>
+                        $(function () { $('#btnClip1').click(function () { try {window.clipboardData.setData('text', $('#referUrl1').val());bootbox.alert('复制成功');} catch (e) { alert('你的浏览器不支持复制，请手动按Ctrl+C'); } });
+                        })
+                    </script></div>
+     
+    </div>
+  </div>
+<div style="float:left">
+      <ul class='jt-ucNav jt-ucBaseInfo-nav'>
+    <li class='jt-ucNavItem'>
+      <a href='index.aspx' class='jt-ucNavItem-link' id='baseInfo'>
+        <span class='jt-ucNavItem-linkIcon'></span>
+        <span class='jt-ucNavItem-linkTitle'>账号信息</span>
+      </a>
+    </li>
+    <li class='jt-ucNavItem'>
+      <a href='Pay.aspx' class='jt-ucNavItem-link' id='Pay'>
+        <span class='jt-ucNavItem-linkIcon'></span>
+        <span class='jt-ucNavItem-linkTitle'>账号充值</span>
+      </a>
+    </li>
+    <li class='jt-ucNavItem'>
+      <a href='GetCode.aspx' class='jt-ucNavItem-link' id='account'>
+        <span class='jt-ucNavItem-linkIcon'></span>
+        <span class='jt-ucNavItem-linkTitle'>获取验证码</span>
+      </a>
+    </li>
+    <li class='jt-ucNavItem jt-ucNavItem-no'>
+      <a href='Category.aspx' class='jt-ucNavItem-link' id='pwd'>
+        <span class='jt-ucNavItem-linkIcon'></span>
+        <span class='jt-ucNavItem-linkTitle'>项目列表</span>
+      </a>
+    </li>
+    <li class='jt-ucNavItem'>
+      <a href='Message.aspx' class='jt-ucNavItem-link'>
+        <span class='jt-ucNavItem-linkIcon'></span>
+        <span class='jt-ucNavItem-linkTitle'>业务记录</span>
+      </a>
+    </li>
+    <li class='jt-ucNavItem'>
+      <a href='CommissionToBalance.aspx' class='jt-ucNavItem-link'>
+        <span class='jt-ucNavItem-linkIcon'></span>
+        <span class='jt-ucNavItem-linkTitle'>佣金变余额</span>
+      </a>
+    </li>
+    <li class='jt-ucNavItem jt-ucNavItem-last'>
+      <a href='/Login.aspx?act=logout' class='jt-ucNavItem-link jt-ucNavItem-linkOff'>
+        <span class='jt-ucNavItem-linkIcon'></span>
+        <span class='jt-ucNavItem-linkTitle'>退出登陆</span>
+      </a>
+    </li>
+  </ul>
+</div>
+
+  <!-- <div class="jt-uc-right clearfix">
+  	<!-- 个人中心主体内容 -->
+    <!-- <div class="jt-uc-baseInfo-box"> -->
+
+<div style="celar:both;margin:60px 0 0 500px"><!-- class="jt-uc-baseInfo-item jt-uc-baseInfo1" -->
+        <!-- 基本信息 --><input type="hidden" id="itype" class="form-control" value="0" placeholder="用户类型">
+        <div class="jt-uc-baseInfo-inputBox">
+          <span class="jt-uc-baseInfo-inputTitle">用 户 ID：</span>
+            <span> 100622254</span>
+            
+          <input type="hidden"  id="uid" value="100622254" class="jt-uc-baseInfo-inputTitle" placeholder="用户ID"/>
+        </div>
+        <div class="jt-uc-baseInfo-inputBox">
+          <span class="jt-uc-baseInfo-inputTitle">用 户 名：</span>
+            <span> vipqjt</span>
+          <input type="hidden"  id="uname" value="vipqjt" class="jt-uc-baseInfo-inputTitle" placeholder="用户名"/>
+        </div>
+        <div class="jt-uc-baseInfo-inputBox">
+          <span class="jt-uc-baseInfo-inputTitle">当前密码：</span>
+          <input class="jt-uc-baseInfo-input" type="text" id="userPassword" placeholder="当前密码" />
+        </div>
+        <div class="jt-uc-baseInfo-inputBox">
+          <span class="jt-uc-baseInfo-inputTitle">新 密 码：</span>
+          <input class="jt-uc-baseInfo-input" type="text"id="newPassword" placeholder="新 密 码" />
+        </div>
+        <div class="jt-uc-baseInfo-inputBox">
+          <span class="jt-uc-baseInfo-inputTitle">确认新密码：</span>
+          <input class="jt-uc-baseInfo-input" type="text" id="repeatNewPassword" placeholder="确认新密码"  />
+        </div>
+        <div class="jt-uc-baseInfo-inputBox">
+          <span class="jt-uc-baseInfo-inputTitle">联系电话：</span>
+          <input class="jt-uc-baseInfo-input" type="text" id="Phone"  value="17688394417" placeholder="联系电话"  />
+        </div>
+        <div class="jt-uc-baseInfo-inputBox">
+          <span class="jt-uc-baseInfo-inputTitle">联系QQ：</span>
+          <input class="jt-uc-baseInfo-input" type="text" id="userQQ"  value="32313213213" placeholder="联系QQ"  />
+        </div>
+        <div class="jt-uc-baseInfo-inputBox">
+          <span class="jt-uc-baseInfo-inputTitle">联系邮箱：</span>
+          <input class="jt-uc-baseInfo-input" type="text" id="userEmail" value="32313213213@qq.com" placeholder="联系邮箱"  />
+        </div>
+        <div class="jt-uc-baseInfo-inputBox">
+          <span class="jt-uc-baseInfo-inputTitle">支付宝姓名：</span>
+          <input class="jt-uc-baseInfo-input" type="text" id="trueName"  value="去去去" placeholder="联系邮箱"  />
+        </div>
+        <div class="jt-uc-baseInfo-inputBox">
+          <span class="jt-uc-baseInfo-inputTitle">支付宝账号：</span>
+          <input class="jt-uc-baseInfo-input" type="text" id="userAccount" value="17688394419" placeholder="联系邮箱"  />
+        </div>
+        <div class="jt-uc-baseInfo-inputBox">
+          <span class="jt-uc-baseInfo-inputTitle"></span>
+          <button class="jt-uc-baseInfo-btn" onclick="modUser();">保存</button>
+        </div>
+
+      </div>
+
+<script type="text/javascript">
+    function modUser() {
+        var uid = $("#uid").val();
+        var uName = $("#uname").val();
+        var itype = $("#itype").val();
+        var userPassword = $("#userPassword").val();
+        var newPassword = $("#newPassword").val();
+        var repeatNewPassword = $("#repeatNewPassword").val();
+        var trueName = $("#trueName").val();
+        var Phone = $("#Phone").val();
+        var userQQ = $("#userQQ").val();
+        var userEmail = $("#userEmail").val();
+        var userAccount = $("#userAccount").val();
+
+        $.post('action.aspx', { type: 'modUser', mcode: '', uid: uid, itype: itype, uName: uName, userPassword: userPassword, newPassword: newPassword, repeatNewPassword: repeatNewPassword, trueName: trueName, Phone: Phone, userQQ: userQQ, userEmail: userEmail, userAccount: userAccount },
+            function (data) {
+                alert(data);
+            });
+    }
+</script>
+</div> 
+
+
